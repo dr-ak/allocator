@@ -12,19 +12,12 @@ before_install:
 install:
 - sudo apt-get install -qq g++-6
 - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
-- sudo apt-get install libgtest-dev
 - sudo apt-get install cmake
-- cd /usr/src/gtest/
-- sudo cmake CMakeLists.txt
-- sudo make
-- sudo cp *.a /usr/lib
-- cd $TRAVIS_BUILD_DIR
 
 
 script:
 - cmake .
 - cmake --build .
-- cmake --build . --target test
 - cmake --build . --target package
 deploy:
   provider: script

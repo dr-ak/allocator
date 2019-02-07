@@ -21,5 +21,3 @@ set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
 set(CPACK_PACKAGE_CONTACT alex-r-1982@mail.ru)
 
 include(CPack)
-
-enable_testing()
